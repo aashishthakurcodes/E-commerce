@@ -1,6 +1,3 @@
 # E-commerce
 
-
-
-
-kjhiug;,lknnolerfverferrve
+E-Commerce project
