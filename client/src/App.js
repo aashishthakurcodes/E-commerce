@@ -4,7 +4,7 @@ import Header from  "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Category from "./components/Category/Category";
 import SingleProduct from "./components/SingleProduct/SingleProduct";
-import Newsletter from "./components/Footer/Newsletter/Newsletter.jsx1"
+import Newsletter from "./components/Footer/Newsletter/Newsletter"
 import AppContext from "./Utilis/context";
  
 
