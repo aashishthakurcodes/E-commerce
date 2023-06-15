@@ -1,6 +1,6 @@
 import "./Footer.scss";
 const Footer = () => {
-    return <div>Footer</div>;
+    return <div>Footer file</div>;
 };
 
 export default Footer;
