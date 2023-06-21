@@ -16,3 +16,10 @@ const params = {
         return error;
     }
 }
+ export const makePaymentRequest=axios.create({
+    baseURL:process.env.REACT_APP_DEV_URL,
+    headers:{
+        Authorization:"bearer " + process.env.REACT_APP_STRIP_APP_KEY ,
+    },
+    
+})

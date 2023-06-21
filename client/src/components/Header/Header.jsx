@@ -12,7 +12,9 @@ import "./Header.scss";
 const Header = () => {
   const [scroll, setScroll] = useState(false);
   const [showcart, setShowCart] = useState(false);
+  const {cartCount}=useContext(Context)
   const [showSearch, setShowSearch] = useState(false);
+  const navigate=useNavigate();
   
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -32,17 +34,18 @@ const Header = () => {
       <header className={`main-header ${scroll ? "sticky-header" : " "}`}>
         <div className="header-content">
           <ul className="left">
-            <li>Home</li>
+            <li onClick={()=>navigate("/")}>Home</li>
             <li>About</li>
             <li>Categories</li>
           </ul>
-          <div className="center">Logo</div>
+          <div className="center" onClick={()=>navigate("/")}>Logo</div>
           <div className="right">
             <TbSearch  onClick={()=>setShowSearch(true)} />
             <AiOutlineHeart />
             <span className="cart-icon" onClick={()=>setShowCart(true)}>
               <CgShoppingCart />
-              <span>5</span>
+            {!!cartCount &&
+              <span>{cartCount}</span>}
             </span>
           </div>
           
