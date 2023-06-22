@@ -11,9 +11,7 @@ import "./Cart.scss";
 const Cart = () => {
     const { cartItems, setShowCart, cartSubTotal } = useContext(Context);
 
-    const stripePromise = loadStripe(
-        process.env.REACT_APP_STRIPE_PUBLISH_KEY
-    );
+    const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISH_KEY);
 
     const handlePayment = async () => {
         try {
