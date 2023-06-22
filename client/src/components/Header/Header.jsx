@@ -7,6 +7,7 @@ import { AiOutlineHeart } from "react-icons/ai";
 import Search from "./Search/Search";
 import Cart from "../Cart/Cart";
 import { Context } from "../../Utilis/context";
+import Category from "../Category/Category";
 
 import "./Header.scss";
 const Header = () => {
@@ -35,8 +36,8 @@ const Header = () => {
         <div className="header-content">
           <ul className="left">
             <li onClick={()=>navigate("/")}>Home</li>
-            <li>About</li>
-            <li>Categories</li>
+            <li onClick={()=>navigate("/about")}>About</li>
+            <li >Categories</li>
           </ul>
           <div className="center" onClick={()=>navigate("/")}>Logo</div>
           <div className="right">

@@ -8,8 +8,8 @@ import { makePaymentRequest } from "../../Utilis/api";
 
 import "./Cart.scss";
 
-const Cart = () => {
-    const { cartItems, setShowCart, cartSubTotal } = useContext(Context);
+const Cart = ({setShowCart}) => {
+    const { cartItems, cartSubTotal } = useContext(Context);
 
     const stripePromise = loadStripe(process.env.REACT_APP_STRIPE_PUBLISH_KEY);
 
@@ -26,6 +26,10 @@ const Cart = () => {
             console.log(err);
         }
     };
+    
+  const handleCloseCart = () => {
+    setShowCart(false);
+  };
 
     return (
         <div className="cart-panel">
@@ -38,7 +42,7 @@ const Cart = () => {
                     <span className="heading">Shopping Cart</span>
                     <span
                         className="close-btn"
-                        onClick={() => setShowCart(false)}
+                        onClick={()=> setShowCart(false)}
                     >
                         <MdClose className="close-btn" />
                         <span className="text">close</span>
